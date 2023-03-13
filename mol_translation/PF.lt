@@ -1,0 +1,41 @@
+import "electrolyte.lt"
+
+PF inherits electrolyte {
+	write("Data Atoms") {
+		#Atom ID  Mol ID  Charges       x       y       z
+		$atom:P1	$mol:...	@atom:P	1.34  2.0 2.0  22.0000
+		$atom:F2	$mol:...	@atom:F	-0.39	2.6914000000000016 1.462299999999999 20.161100000000005
+		$atom:F3	$mol:...	@atom:F	-0.39	0.672600000000001 1.1810000000000045 21.143500000000003
+		$atom:F4	$mol:...	@atom:F	-0.39	1.4344000000000001 3.2649000000000044 20.6999
+		$atom:F5	$mol:...	@atom:F	-0.39	1.308600000000002 2.5378000000000043 22.839000000000006
+		$atom:F6	$mol:...	@atom:F	-0.39	3.3275000000000006 2.819099999999999 21.856500000000004
+		$atom:F7	$mol:...	@atom:F	-0.39	2.5656 0.7351000000000028 22.8001
+	}
+	write("Data Bonds"){
+		# bond-ID	bond-type	atom i	atom j
+		$bond:bs1	@bond:s1	$atom:P1	$atom:F2
+		$bond:bs2	@bond:s1	$atom:P1	$atom:F3
+		$bond:bs3	@bond:s1	$atom:P1	$atom:F4
+		$bond:bs4	@bond:s1	$atom:P1	$atom:F5
+		$bond:bs5	@bond:s1	$atom:P1	$atom:F6
+		$bond:bs6	@bond:s1	$atom:P1	$atom:F7
+	}
+	write("Data Angles") {
+		# Angle_ID	Angle-type	atom_i	atom_j	atom_k
+		$angle:a18	@angle:s2	$atom:F2	$atom:P1	$atom:F5
+		$angle:a19	@angle:s2	$atom:F3	$atom:P1	$atom:F6
+		$angle:a20	@angle:s2	$atom:F4	$atom:P1	$atom:F7
+		$angle:a21	@angle:s1	$atom:F2	$atom:P1	$atom:F3
+		$angle:a22	@angle:s1	$atom:F2	$atom:P1	$atom:F4
+		$angle:a23	@angle:s1	$atom:F2	$atom:P1	$atom:F6
+		$angle:a24	@angle:s1	$atom:F2	$atom:P1	$atom:F7
+		$angle:a24	@angle:s1	$atom:F5	$atom:P1	$atom:F3
+		$angle:a26	@angle:s1	$atom:F5	$atom:P1	$atom:F4
+		$angle:a27	@angle:s1	$atom:F5	$atom:P1	$atom:F6
+		$angle:a28	@angle:s1	$atom:F5	$atom:P1	$atom:F7
+		$angle:a29	@angle:s1	$atom:F3	$atom:P1	$atom:F4
+		$angle:a30	@angle:s1	$atom:F4	$atom:P1	$atom:F6
+		$angle:a31	@angle:s1	$atom:F6	$atom:P1	$atom:F7
+		$angle:a32	@angle:s1	$atom:F7	$atom:P1	$atom:F3
+	}
+}
